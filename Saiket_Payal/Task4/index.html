@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 40px;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #032344;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #01070e;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Contact Us</h2>
+  <form>
+    <!-- Name -->
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <!-- Email -->
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <!-- Gender -->
+    <label>Gender</label>
+    <input type="radio" id="male" name="gender" value="male"> <label for="male" style="display:inline;">Male</label>
+    <input type="radio" id="female" name="gender" value="female"> <label for="female" style="display:inline;">Female</label>
+
+    <!-- Interests -->
+    <label>Areas of Interest</label>
+    <input type="checkbox" id="web" name="interest" value="Web Development"> <label for="web" style="display:inline;">Web Development</label><br>
+    <input type="checkbox" id="app" name="interest" value="App Development"> <label for="app" style="display:inline;">App Development</label><br>
+    <input type="checkbox" id="ui" name="interest" value="UI/UX Design"> <label for="ui" style="display:inline;">UI/UX Design</label>
+
+    <!-- Preferred Contact -->
+    <label for="contact">Preferred Contact Method</label>
+    <select id="contact" name="contact">
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+      <option value="whatsapp">WhatsApp</option>
+    </select>
+
+    <!-- Message -->
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+    <!-- Submit -->
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
